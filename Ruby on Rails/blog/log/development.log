@@ -6,3 +6,18 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 39ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4530)
 
 
+Started GET "/" for ::1 at 2021-09-30 21:27:09 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 32)
+Completed 200 OK in 18ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1901)
+
+
+Started GET "/" for ::1 at 2021-09-30 21:27:10 +0800
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+

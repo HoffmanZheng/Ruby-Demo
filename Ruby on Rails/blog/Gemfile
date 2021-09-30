@@ -56,3 +56,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # ---> tzinfo-data is specific to Microsoft Windows, and results in a potentially confusing warning message on non-Windows systems.
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# group :production do 
+#   gem 'pg', '1.2.3'
+# end
+# ---> bundle config set --local without 'production', then bundle update
