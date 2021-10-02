@@ -16,3 +16,5 @@ micropost = first_user.microposts.first
 micropost.user
 exit
 ```
+---- vscode ruby debugger ----
+10. 

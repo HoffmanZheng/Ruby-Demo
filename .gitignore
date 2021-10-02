@@ -14,6 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /Ruby\ on\ Rails/blog/log/*
 /Ruby\ on\ Rails/blog/tmp/*
+/Ruby\ on\ Rails/blog/tmp
 !/Ruby\ on\ Rails/blog/log/.keep
 !/Ruby\ on\ Rails/blog/tmp/.keep
 
@@ -39,3 +40,5 @@
 /Ruby\ on\ Rails/blogyarn-debug.log*
 /Ruby\ on\ Rails/blog.yarn-integrity
 
+# Ignore the .vscode direcctory
+/Ruby\ on\ Rails/blog/.vscode
