@@ -18,3 +18,5 @@ exit
 ```
 ---- vscode ruby debugger ----
 10. 
+---- static pages ----
+11. ./bin/rails generate controller StaticPages home help
