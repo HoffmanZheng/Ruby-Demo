@@ -30,4 +30,5 @@ exit
 19. extract the common yield title into the application.html.erb, remove the html structure in home,about,help, only leave the interior content
 20. advanced testing setup: enhanced reporter and automated test runner that detects file changes ---> using minitest/reporters + Guard
 21. `bundle exec guard init` -> Guardfile
-
+---- Rails Guide ----
+22. article = ..new, article.save; Article.all, Article.find(1); 

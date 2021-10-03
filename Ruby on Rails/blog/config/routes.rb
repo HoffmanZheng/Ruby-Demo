@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # ---> define the root routes thought syntax: root 'controller_name#action_name'
   root 'static_pages#home'
   # ---> lead to the creation of Rails helper called `root_url`
-
+  get '/articles', to: "articles#index"
+  get '/articles/:id', to: "articles#show"
 end
