@@ -1,12 +1,17 @@
 require "test_helper"
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
-  
+
   def setup # ---> special function, automatically run before every test
     @base_title = "Ruby on Rails Tutorial Sample App"
     # extract the repetition in the code
   end
-  
+
+  test "should get root" do
+    get root_url  # ???? FILL_IN
+    assert_response :success
+  end
+
   test "should get home" do
     get static_pages_home_url
     assert_response :success

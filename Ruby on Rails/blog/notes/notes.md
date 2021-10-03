@@ -19,7 +19,7 @@ exit
 ---- vscode ruby debugger ----
 10. 
 ---- static pages ----
-11. ./bin/rails generate controller StaticPages home help
+11. rails generate controller ControllerName <optional action names>; ---> ./bin/rails generate controller StaticPages home help
 12. Ruby uses CamelCase for class names, and snake-case for file names
 13. **undo** things in Rails: `rails destroy` + model User / controller StaticPages home help
 14. rails db:migrate  ---> rails db:rollback (VERSION=0)
@@ -27,5 +27,7 @@ exit
 16. test - routes - controller - view html
 17. dynamic pages -> make titles changes on each page -> seems does not work in the Chrome??
 18. DRY -> embedded Ruby in views - provide and yield function - <% ... %> and <%= ... %>
-19. 
+19. extract the common yield title into the application.html.erb, remove the html structure in home,about,help, only leave the interior content
+20. advanced testing setup: enhanced reporter and automated test runner that detects file changes ---> using minitest/reporters + Guard
+21. `bundle exec guard init` -> Guardfile
 
