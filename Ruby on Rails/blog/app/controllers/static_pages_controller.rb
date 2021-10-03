@@ -11,4 +11,5 @@ class StaticPagesController < ApplicationController
   end
   def about
   end
+  # ---> extract the repetition in the code
 end
