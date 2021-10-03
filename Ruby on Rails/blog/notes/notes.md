@@ -25,4 +25,5 @@ exit
 14. rails db:migrate  ---> rails db:rollback (VERSION=0)
 15. **test** controller tests, model tests, and integration tests
 16. test - routes - controller - view html
+17. dynamic pages -> make titles changes on each page -> seems does not work in the Chrome??
 
