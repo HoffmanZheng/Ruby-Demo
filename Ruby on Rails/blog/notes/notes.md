@@ -20,3 +20,9 @@ exit
 10. 
 ---- static pages ----
 11. ./bin/rails generate controller StaticPages home help
+12. Ruby uses CamelCase for class names, and snake-case for file names
+13. **undo** things in Rails: `rails destroy` + model User / controller StaticPages home help
+14. rails db:migrate  ---> rails db:rollback (VERSION=0)
+15. **test** controller tests, model tests, and integration tests
+16. test - routes - controller - view html
+
