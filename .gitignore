@@ -42,3 +42,6 @@
 
 # Ignore the .vscode direcctory
 /Ruby\ on\ Rails/blog/.vscode
+
+# Ignore the test report in sqlite
+/Ruby\ on\ Rails/blog/db/test.*
