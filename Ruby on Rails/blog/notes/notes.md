@@ -34,4 +34,7 @@ exit
 22. article = ..new, article.save; Article.all, Article.find(1); 
 23. ./bin/rails routes could inspect all maped routes, Prefix + suffix like '_url' or '_path' form the helpers name
 24. submitted form data via params[:article][:title] would be passed individually to Article.new, which would be verbose and possibly error-prone. (become worse as more fields are added)
-25. instead, the form values will be passed through a single Hash. We must **specify** what velues are allowed in that Hash to avoid malicious form fields submission.
+25. instead, the form values will be passed through a single Hash. We must **specify** what values are allowed in that Hash to avoid malicious form fields submission.
+26. `edit` form looks the same as our `new` form, thanks to the Rails form builder and resourceful routing. The form builder **automatically** configures the form to make the appropriate kind of request, based on whether the model object has been previously saved.
+27. A partial's filename must be prefixed with an underscore, e.g. _form.html.erb. But when rendering, it is referenced without the underscore, e.g. render "form".
+28. how is update action working? submit in _form.html.erb, could automatically use POST / PATCH request ??? 

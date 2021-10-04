@@ -1,25 +1,7 @@
 <h1>New Article</h1>
 
-<%# a form builder, that follows Rails conventions 
-the `form_with` helper instantiates a form builder %>
-<%= form_with model: @article do |form| %>
-    <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
-        <% @article.errors.full_messages_for(:title).each do |message| %>
-            <div><%= message %></div>
-        <% end %>
-    </div>
-
-    <div>
-        <%= form.label :body %>
-        <%= form.text_area :body %>
-        <% @article.errors.full_messages_for(:body).each do |message| %>
-            <div><%= message %></div>
-        <% end %>
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
+<%# ---> article will be passed to the partial as a local variable
+Because partials are shared code, it is best practice that they 
+do not depend on specific instance variables set by a controller action. %>
+<%= render "form", article: @article %>
+<%# use partial via render %>
