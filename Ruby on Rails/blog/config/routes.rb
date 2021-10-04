@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # ---> define the root routes thought syntax: root 'controller_name#action_name'
   root 'static_pages#home'
   # ---> lead to the creation of Rails helper called `root_url`
-  get '/articles', to: "articles#index"
-  get '/articles/:id', to: "articles#show"
+  # get '/articles', to: "articles#index"
+  # get '/articles/:id', to: "articles#show"
+  resources :articles
+  # ---> Rails provides a routes method named `resources`
+  # that maps all of the conventional routes for a collection of resources
 end

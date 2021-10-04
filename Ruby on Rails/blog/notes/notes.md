@@ -32,3 +32,6 @@ exit
 21. `bundle exec guard init` -> Guardfile
 ---- Rails Guide ----
 22. article = ..new, article.save; Article.all, Article.find(1); 
+23. ./bin/rails routes could inspect all maped routes, Prefix + suffix like '_url' or '_path' form the helpers name
+24. submitted form data via params[:article][:title] would be passed individually to Article.new, which would be verbose and possibly error-prone. (become worse as more fields are added)
+25. instead, the form values will be passed through a single Hash. We must **specify** what velues are allowed in that Hash to avoid malicious form fields submission.
