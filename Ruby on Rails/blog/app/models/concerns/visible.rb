@@ -13,7 +13,7 @@ module Visible
     # class methods could be called in html.erb
     class_methods do
         def public_count
-            where(status: 'public').public_count
+            where(status: 'public').count
         end
     end
 
