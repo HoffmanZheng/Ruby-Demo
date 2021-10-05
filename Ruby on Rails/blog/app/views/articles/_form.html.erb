@@ -21,6 +21,11 @@ the `form_with` helper instantiates a form builder %>
     </div>
 
     <div>
+        <%= form.label :status %>
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+
+    <div>
         <%= form.submit %>
     </div>
 <% end %>

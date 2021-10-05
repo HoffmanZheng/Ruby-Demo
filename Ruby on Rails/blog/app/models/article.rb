@@ -10,4 +10,13 @@ class Article < ApplicationRecord
     has_many :comments
     # ---> enable automatic behavior, like `@article.comments`
     # could retrieve all the comments as an array belonging to that article
+
+    # ---> Concerns: add status
+    include Visible
+    # VALID_STATUSES = ['public', 'private', 'archived']
+    # validates :status, inclusion: { in: VALID_STATUSES }
+
+    # def archived?
+    #     status == 'archived'
+    # end
 end
