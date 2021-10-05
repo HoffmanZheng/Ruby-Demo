@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   # ---> lead to the creation of Rails helper called `root_url`
   # get '/articles', to: "articles#index"
   # get '/articles/:id', to: "articles#show"
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   # ---> Rails provides a routes method named `resources`
   # that maps all of the conventional routes for a collection of resources
+
+  # ---> create `comments` as a nested resources within `articles`
+
 end
