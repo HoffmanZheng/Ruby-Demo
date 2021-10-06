@@ -2,19 +2,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>  <%# mitigate cross-site request forgery %>
-    <%= csp_meta_tag %>    
-    <%# content security policy, to mitigate cross-site scripting %>
+    <%= csp_meta_tag %>  <%# content security policy, to mitigate cross-site scripting %>
 
+    <%# 使用 Rails 内置的 `stylesheet_link_tag` 方法，在所有媒介类型中引入 `application.css` %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# 修复部分游览器不支持 HTML5 的问题 %>
+    <!-- [if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5/min/js">
+    <![endif]-->
   </head>
 
   <body>
-  <%# this code is responsible for inserting 
-  the contents of each page into the layout %>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "sample app", "#", id: "logo" %>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Home", '#' %></li>
+              <li><%= link_to "Help", '#' %></li>
+              <li><%= link_to "Log in", '#' %></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+
+    <%# this code is responsible for inserting 
+    the contents of each page into the layout %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

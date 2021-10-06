@@ -43,3 +43,5 @@ exit
 31. Concerns: make large controllers or models easier to understand and manage. duplicated logic in comments/article -> the methods in our concern is related to the visibility of model
 32. def class_method in Concern, which could be called in html.erb
 33. bin/rails generate migration AddStatusToArticles status:string; bin/rails generate migration AddStatusToComments status:string -> then permit status in the strong parameter -> add a select box to the forms, specify the default status as public
+---- Rails 背后的 Ruby ----
+34. 辅助方法 helper：允许开发者自己定义，供在视图中使用
