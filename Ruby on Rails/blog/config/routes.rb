@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about' # --->  automatically creates a helper `static_pages_about_url`
   get '/contact', to: 'static_pages#contact'
-  resources :microposts
-  resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # ---> define the root routes thought syntax: root 'controller_name#action_name'
   root 'static_pages#home'

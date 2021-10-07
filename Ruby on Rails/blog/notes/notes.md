@@ -47,3 +47,4 @@ exit
 34. 辅助方法 helper：允许开发者自己定义，供在视图中使用
 ---- 完善布局 ----
 35. ./bin/rails generate integration_test site_layout
+36. ./bin/rails generate controller Users new
