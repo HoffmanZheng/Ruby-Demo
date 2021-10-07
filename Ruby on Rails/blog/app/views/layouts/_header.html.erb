@@ -1,0 +1,17 @@
+<%# header tag indicates that element should be put on the top of the page %>
+<%# three class are specified at header, which could be used seeral times, 
+where as id could only be used once on the same page %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <%# div tag: no special meanning, except dividing doc into different part %>
+    <div class="container">
+    <%= link_to "sample app", "#", id: "logo" %>
+        <%# nav: clarify these link are navigations %>
+        <nav>
+        <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", '#' %></li>
+            <li><%= link_to "Help", '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>
+        </ul>
+        </nav>
+    </div>
+</header>
