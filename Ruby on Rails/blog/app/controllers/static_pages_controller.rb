@@ -12,4 +12,7 @@ class StaticPagesController < ApplicationController
   def about
   end
   # ---> extract the repetition in the code
+
+  def contact
+  end
 end

@@ -45,3 +45,5 @@ exit
 33. bin/rails generate migration AddStatusToArticles status:string; bin/rails generate migration AddStatusToComments status:string -> then permit status in the strong parameter -> add a select box to the forms, specify the default status as public
 ---- Rails 背后的 Ruby ----
 34. 辅助方法 helper：允许开发者自己定义，供在视图中使用
+---- 完善布局 ----
+35. 

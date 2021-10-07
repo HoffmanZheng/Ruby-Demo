@@ -4,6 +4,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$light-grey: #777;
+
 // universal
 // CSS rule specify target according to the class, id, html tag or their combination
 
@@ -23,10 +25,9 @@ textarea {
 // dot 意味着样式化一个类，# 样式化一个 id 
 .center {
     text-align: center;
-}
-
-.center h1 {
-    margin-bottom: 10px;
+    h1 {
+        margin-bottom: 10px;
+    }
 }
 
 // words typography
@@ -48,7 +49,7 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: #777;
+    color: $light-grey;
 }
 
 p {
@@ -67,11 +68,11 @@ p {
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
-}
-
-#logo:hover {
-    color: #fff;
-    text-decoration: none;
+    // #logo:hover, 嵌套这种，需要引用父级元素#logo，使用&符号实现
+    &：hover{
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 // footer
@@ -80,27 +81,22 @@ footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
-    color: #777;
-}
-
-footer a {
-    color: #555;
-}
-
-footer a:hover { 
-    color: #222;
-}
-
-footer small {
-    float: left;
-}
-
-footer ul {
-    float: right;
-    list-style: none;
-}
-
-footer ul li {
-    float: left;
-    margin-left: 15px;
+    color: $light-grey;
+    a {
+        color: #555;
+        &:hover {
+            color: #222;
+        }
+    }
+    small {
+        float: left;
+    }
+    ul {
+        float: right;
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 15px;
+        }
+    }
 }

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'static_pages/home' # ---> maped to the home action
-  get 'static_pages/help'
-  get 'static_pages/about' # --->  automatically creates a helper `static_pages_about_url`
+  # get 'static_pages/home' # ---> maped to the home action
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about' # --->  automatically creates a helper `static_pages_about_url`
+  get '/contact', to: 'static_pages#contact'
   resources :microposts
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
   end
   # ---> Rails provides a routes method named `resources`
   # that maps all of the conventional routes for a collection of resources
-
   # ---> create `comments` as a nested resources within `articles`
 
 end
