@@ -10338,3 +10338,44 @@ Processing by StaticPagesController#contact as HTML
 Completed 200 OK in 19ms (Views: 18.4ms | Allocations: 10381)
 
 
+Started GET "/" for ::1 at 2021-10-07 21:44:04 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 241.9ms | Allocations: 67887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 155)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 339)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 299.6ms | Allocations: 98857)
+Completed 200 OK in 325ms (Views: 309.7ms | ActiveRecord: 0.0ms | Allocations: 102148)
+
+
+Started GET "/" for ::1 at 2021-10-07 21:44:05 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 9974)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 10351)
+
+
+Started GET "/signup" for ::1 at 2021-10-07 21:44:05 +0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 9997)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 10910)
+
+
