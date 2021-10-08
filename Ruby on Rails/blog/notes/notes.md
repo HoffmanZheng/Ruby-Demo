@@ -48,3 +48,4 @@ exit
 ---- 完善布局 ----
 35. ./bin/rails generate integration_test site_layout
 36. ./bin/rails generate controller Users new
+37. ./bin/rails generate migration add_index_to_user_email
