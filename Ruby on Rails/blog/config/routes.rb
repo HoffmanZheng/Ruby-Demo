@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   # ---> create `comments` as a nested resources within `articles`
 
   get '/signup', to: 'users#new'
+  resources :users
 end

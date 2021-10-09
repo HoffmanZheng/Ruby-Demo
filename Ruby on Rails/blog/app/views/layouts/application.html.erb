@@ -20,8 +20,13 @@
     <%# this code is responsible for inserting 
     the contents of each page into the layout %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%# debug info in website layout, only in dev env %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
