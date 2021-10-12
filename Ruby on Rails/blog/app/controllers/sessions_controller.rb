@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     # return false if any value besides nil and false
     if user && user.authenticate(params[:session][:password])
-      # success
+      log_in user
+      redirect_to user   # rails turn that into user_url(user) automatically
     else
       flash.now[:danger] = 'Invalid email/password combination'
       # different to `redirect_to`, render after flash doesn't disappear the flash info
@@ -17,5 +18,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  end
+
+  # return user if in the session
+  def current_user
+    if session[:user_id]
+      User.find_by(id: session[:user_id])
+    end
   end
 end

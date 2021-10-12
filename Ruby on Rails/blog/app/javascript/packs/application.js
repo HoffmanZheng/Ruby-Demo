@@ -11,3 +11,7 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// for dropdown
+require("jquery") 
+import "bootstrap"

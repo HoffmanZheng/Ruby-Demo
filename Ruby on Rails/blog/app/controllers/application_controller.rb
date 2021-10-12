@@ -4,6 +4,8 @@
 # ---> to every action in the application
 # ---> 9.1 includes helpers for logging in and logging out of all controllers
 class ApplicationController < ActionController::Base
+    include SessionsHelper
+
     def hello
         render html: "hello world!"
     end
