@@ -13,4 +13,10 @@ class ActiveSupport::TestCase
   include ApplicationHelper # for the use of full_name method
 
   # Add more helper methods to be used by all tests here...
+
+
+  # 不能像 sessions_helper 那样使用 current_user，但是可以使用 session 方法
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end

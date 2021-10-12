@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       # show in the subsequent page, but disappear further visit another page or refresh
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
