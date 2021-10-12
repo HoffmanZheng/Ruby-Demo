@@ -4,6 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+.DS_Store
+*.swp
+
 # Ignore bundler config.
 /Ruby\ on\ Rails/blog/.bundle
 
@@ -13,8 +16,8 @@
 
 # Ignore all logfiles and tempfiles.
 /Ruby\ on\ Rails/blog/log/*
-/Ruby\ on\ Rails/blog/tmp/*
 /Ruby\ on\ Rails/blog/tmp
+/Ruby\ on\ Rails/blog/tmp/cache
 !/Ruby\ on\ Rails/blog/log/.keep
 !/Ruby\ on\ Rails/blog/tmp/.keep
 
