@@ -43,6 +43,12 @@ class User < ApplicationRecord
     # 根据请求中的记忆令牌验证用户身份
     def authenticate?(remember_token)
         # 这里的 `remember_digest` 等同于 `self.remember_digest`
+        return false if remember_digest.nil?
         BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    end
+
+    # 清除持久会话中的记忆令牌摘要
+    def forget
+        update_attribute(:remember_digest, nil)
     end
 end

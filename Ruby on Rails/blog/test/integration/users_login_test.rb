@@ -36,6 +36,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_not is_logged_in?
     assert_redirected_to root_url
+
+    # 用户在多个游览器窗口中已登录，然后在其中一个窗口退出后
+    # 用户在第二个窗口退出时，会抛出异常，因为当前没有用户
+    delete logout_path
+
     follow_redirect!
     assert_select "a[href=?]", login_path   # 使用持久会话后，用户无法退出
     assert_select "a[href=?]", logout_path, count: 0

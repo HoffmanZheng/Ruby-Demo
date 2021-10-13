@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     # return false if any value besides nil and false
     if user && user.authenticate(params[:session][:password])
       log_in user
+      # 根据用户是否勾选 '记住我' 复选框，进行持久会话的逻辑
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       remember user
       redirect_to user   # rails turn that into user_url(user) automatically
     else
@@ -19,7 +21,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    # 防止用户开多个窗口，然后第二次退出报错的问题
+    log_out if logged_in?  
     redirect_to root_url
   end
 

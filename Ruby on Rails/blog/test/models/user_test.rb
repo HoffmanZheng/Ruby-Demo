@@ -61,4 +61,11 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+
+  # 一个没有记忆令牌摘要的用户，在调用 authenticate? 时，不应该报错
+  # 在 Firefox 退出后，用户在 Chrome 中仍然有持久会话的 cookies 信息，但缺少
+  # self.remember_toke，所以会在 anthenticate? 方法中报错
+  test "authenticated? should return false for user with nil digest" do
+    assert_not @user.authenticate?('')
+  end
 end
