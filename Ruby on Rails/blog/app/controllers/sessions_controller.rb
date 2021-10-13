@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       log_in user
       # 根据用户是否勾选 '记住我' 复选框，进行持久会话的逻辑
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      remember user
       redirect_to user   # rails turn that into user_url(user) automatically
     else
       flash.now[:danger] = 'Invalid email/password combination'

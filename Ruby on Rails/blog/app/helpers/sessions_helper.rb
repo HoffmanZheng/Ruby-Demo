@@ -13,6 +13,7 @@ module SessionsHelper
             # @current_user = @current_user || User.find_by(id: session[:user_id])
         # 如果在临时会话 session 中找不到，去 cookies 中再次检索持久会话中存储的用户
         else cookies.signed[:user_id]
+            # raise # 测试仍能通过，说明没有覆盖
             user = User.find_by(id: cookies.signed[:user_id])
             if user && user.authenticate?(cookies[:remember_token])
                 log_in user
