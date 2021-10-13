@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     # return false if any value besides nil and false
     if user && user.authenticate(params[:session][:password])
       log_in user
+      remember user
       redirect_to user   # rails turn that into user_url(user) automatically
     else
       flash.now[:danger] = 'Invalid email/password combination'
