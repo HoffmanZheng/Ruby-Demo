@@ -1,0 +1,18 @@
+<%= provide(:title, 'Edit user') %>
+<%= provide(:button_text, 'Save changes') %>
+<h1>Update your profile</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%# 跳转至 edit 页面时，会使用 @user 填充 name 和 email 字段 %>
+        <%# Active Record 提供的 `new_record?` 布尔值方法可以检测用户是新创建的还是已有的
+        如果是新创建的，则发送 POST 请求，否则发送 PATCH 请求  %>
+        <%= render 'form' %>
+
+        <%# 跳转头像服务外链 %>
+        <div class="gravatar_edit">
+            <%= gravatar_for @user %>
+            <a href="https://gravatar.com/emails" target="_blank">change</a>
+        </div>
+    </div>
+</div>

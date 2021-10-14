@@ -13,7 +13,7 @@ class User < ApplicationRecord
     # virtual attributes: password and password_confirmation
     # exist test when user create
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
     # return digest of specified string
     def User.digest(string) 
