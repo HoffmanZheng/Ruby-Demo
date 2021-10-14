@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(name: "Hoffman Zheng", email: "hoffman.zheng@goat.com", 
-    password: "foobar", password_confirmation: "foobar")
+    password: "foobar", password_confirmation: "foobar", admin: true)
 
 
 99.times do |n|
