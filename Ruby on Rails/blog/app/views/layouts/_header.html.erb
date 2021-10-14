@@ -11,7 +11,7 @@ where as id could only be used once on the same page %>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Help", help_path %></li>
             <% if logged_in? %>
-                <li><%= link_to "Users", '#' %></li>
+                <li><%= link_to "Users", users_path %></li>
                 <%# 借助 Bootstrap 实现下拉菜单 %>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

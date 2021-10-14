@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   # pre-filter
-  before_action :logged_in_user, only: [:edit, :update]    # 必须先登录才能修改
+  before_action :logged_in_user, only: [:index, :edit, :update]    # 必须先登录才能修改
   before_action :correct_user, only: [:edit, :update]    # 只能修改自己的信息
 
   def logged_in_user
@@ -57,6 +57,10 @@ class UsersController < ApplicationController
 
   def destroy
 
+  end
+
+  def index
+    @users = User.paginate(page: params[:page])
   end
 
   private
