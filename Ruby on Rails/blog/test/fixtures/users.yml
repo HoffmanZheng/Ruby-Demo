@@ -6,8 +6,9 @@ michael:
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
 
-# two:
-#   name: MyString
-#   email: MyString
+david:
+  name: David Zhang
+  email: david@example.com
+  password_digest: <%= User.digest('password') %>
 
 # empty it for unique email test
