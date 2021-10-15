@@ -49,3 +49,5 @@ exit
 35. ./bin/rails generate integration_test site_layout
 36. ./bin/rails generate controller Users new
 37. ./bin/rails generate migration add_index_to_user_email
+
+38. 调用方法后面加感叹号 ! 会在失败时抛出异常
