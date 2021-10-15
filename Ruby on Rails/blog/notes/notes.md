@@ -51,3 +51,4 @@ exit
 37. ./bin/rails generate migration add_index_to_user_email
 
 38. 调用方法后面加感叹号 ! 会在失败时抛出异常
+  # content: <%= Faker::Lorem.sentence(word_count: 5) %>

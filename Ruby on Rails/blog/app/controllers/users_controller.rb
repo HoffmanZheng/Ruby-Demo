@@ -5,29 +5,13 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]    # 只能修改自己的信息
   before_action :admin_user, only: :destroy
 
-  def logged_in_user
-    unless logged_in?
-      store_location   # 需要拦截的页面，存储原始页面，供登录后跳转使用
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end 
-  end
-
-  def correct_user 
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
-  end
-
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
-  end 
-
   def new
     @user = User.new
   end
 
   def show 
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     # debugger
   end
 
@@ -69,9 +53,18 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
 
-  private
+  private  # Every instance method after private becomes a private method.
     def user_params
       # throw exception if :user element does not exist
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+
+    def correct_user 
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
+  
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end 
 end
