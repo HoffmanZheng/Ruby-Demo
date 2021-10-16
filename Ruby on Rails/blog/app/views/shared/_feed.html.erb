@@ -3,6 +3,6 @@
         <%= render @feed_items %>
     </ol>
     <%= will_paginate @feed_items, 
-        params: { controller: static_pages, action: :home } %>
+        :params=> { :controller=> "static_pages", :action=> "home" } %>
         <%# 跨控制器渲染分页：明确指定首页说在的控制器和动作 %>
 <% end %>
