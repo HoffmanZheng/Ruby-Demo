@@ -53,4 +53,10 @@ class User < ApplicationRecord
     def forget
         update_attribute(:remember_digest, nil)
     end
+
+    # 供首页已登录用户展示其发布的微博
+    def feed
+        # 问号确保 id 值在传入底层 SQL 查询前做了适当的转移，避免 SQL 注入
+        Micropost.where("user_id = ?", id)
+    end
 end

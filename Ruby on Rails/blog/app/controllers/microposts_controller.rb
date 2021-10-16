@@ -7,6 +7,8 @@ class MicropostsController < ApplicationController
             flash[:success] = "Micropost created!"
             redirect_to root_url
         else
+            # 提交失败时，回首页需要继续展示 feed_items
+            @feed_items = current_user.feed.paginate(params[:page])
             render 'static_pages/home' 
         end
     end
