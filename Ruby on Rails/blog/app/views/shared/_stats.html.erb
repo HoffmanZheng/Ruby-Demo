@@ -1,0 +1,18 @@
+<%# 显示关注与被关注统计数量，首页和用户资料页都要使用 %>
+<%# 首页也要使用 %>
+<% @user ||= current_user %> 
+<div class="stats">
+    <a href="<%= following_user_path(@user) %>">
+        <strong id="following" class="stats">
+            <%= @user.following.count %>
+        </strong>
+        following
+    </a>
+
+    <a href="<%= followers_user_path(@user) %>">
+        <strong id="followers" class="stats">
+            <%= @user.followers.count %>
+        </strong>
+        followers
+    </a>
+</div>
