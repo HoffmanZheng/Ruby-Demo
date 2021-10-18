@@ -14,8 +14,9 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_select 'div.pagination'
-    # assert_select 'input[type=FILL_IN]'  # 有图片上传按钮 !!
+    # UNSOLVED! assert_select 'input[type=FILL_IN]'  # 有图片上传按钮 !!
     # test invalid micropost post request
+    # UNSOLVED! 跨控制器渲染分页
     # assert_no_difference 'Micropost.count' do
     #   post microposts_path, params: { micropost: { content: " " } }
     # end
@@ -28,7 +29,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
       post microposts_path, params: { micropost: 
         { content: content, image: image} }
     end
-    # assert FILL_IN.image.attached?
+    # UNSOLVED! assert FILL_IN.image.attached?
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body

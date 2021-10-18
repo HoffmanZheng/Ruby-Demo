@@ -17,6 +17,17 @@ class User < ApplicationRecord
 
     has_many :microposts, dependent: :destroy # 在删除用户的同时也会删除他的微博
 
+    has_many :active_relationships, class_name: "Relationship",
+                                    foreign_key: "follower_id",
+                                    dependent: :destroy
+    has_many :following, through: :active_relationships, source: :followed  # 我关注的人
+
+    has_many :passive_relationships, class_name: "Relationship",
+                                     foreign_key: "followed_id",
+                                     dependent: :destroy
+    # 这里的 source: :follower 可以省略，因为 rails 会自动把 `followers` 换成单数，然后查找 `follower_id` 的外键
+    has_many :followers, through: :passive_relationships, source: :follower  # 关注我的人
+
     # return digest of specified string
     def User.digest(string) 
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : 
@@ -58,5 +69,17 @@ class User < ApplicationRecord
     def feed
         # 问号确保 id 值在传入底层 SQL 查询前做了适当的转移，避免 SQL 注入
         Micropost.where("user_id = ?", id)
+    end
+
+    def follow(other_user)
+        following << other_user
+    end
+
+    def unfollow(other_user)
+        following.delete(other_user)
+    end
+
+    def following?(other_user)
+        following.include?(other_user)
     end
 end
