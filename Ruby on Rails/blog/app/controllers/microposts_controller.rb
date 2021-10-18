@@ -12,7 +12,9 @@ class MicropostsController < ApplicationController
         else
             # 提交失败时，回首页需要继续展示 feed_items
             # ---> 提交失败后 params[:page] 为 nil，导致网站出错
-            @feed_items = current_user.feed.paginate(params[:page])
+            # byebug
+            # binding.pry
+            @feed_items = current_user.feed.paginate(page: params[:page])
             render 'static_pages/home' 
         end
     end

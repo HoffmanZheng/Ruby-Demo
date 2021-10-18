@@ -53,6 +53,28 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
 
+  def following
+    if logged_in?
+      @title = "Following"
+      @user = User.find(params[:id])
+      @users = @user.following.paginate(page: params[:page])
+      render 'show_follow'
+    else
+      redirect_to login_url
+    end
+  end
+
+  def followers
+    if logged_in?
+      @title = "Followers"
+      @user = User.find(params[:id])
+      @users = @user.followers.paginate(page: params[:page])
+      render 'show_follow'
+    else
+      redirect_to login_url
+    end
+  end
+
   private  # Every instance method after private becomes a private method.
     def user_params
       # throw exception if :user element does not exist

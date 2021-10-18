@@ -43,6 +43,7 @@ group :development, :test do
   # ---> install the version 1.4 or newer but not 2
   # ---> sqlite3 gem only be included in development or test environment, prevents potential conflicts with the database used by Heroku 
   gem 'sqlite3', '~> 1.4'    
+  gem 'pry-rails'   # `binding.pry` to debug the code
 end
 
 group :development do
