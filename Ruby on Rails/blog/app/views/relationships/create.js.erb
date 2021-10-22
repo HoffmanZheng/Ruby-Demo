@@ -1,0 +1,4 @@
+<%# .js.erb 可以嵌入 ruby 代码 %>
+<%# 把关注用户表单换成取消关注用户表单，并更新关注数量 %>
+$("#follow_form").html("<%= escape_javascript(render('users/unfollow')) %>");
+$("#followers").html('<%= @user.followers.count %>');
