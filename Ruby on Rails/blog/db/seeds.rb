@@ -17,7 +17,7 @@ User.create!(name: "Hoffman Zheng", email: "hoffman.zheng@goat.com",
     password_confirmation: password)
 end
 
-users = User.order(:created_at).take(6)
+users = User.order(:created_at).take(20)
 50.times do
     content = Faker::Lorem.sentence(word_count: 5)
     users.each { |user| user.microposts.create!(content: content) }

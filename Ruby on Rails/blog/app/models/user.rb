@@ -68,7 +68,13 @@ class User < ApplicationRecord
     # 供首页已登录用户展示其发布的微博
     def feed
         # 问号确保 id 值在传入底层 SQL 查询前做了适当的转移，避免 SQL 注入
-        Micropost.where("user_id = ?", id)
+        # Micropost.where("user_id = ?", id)
+        # ids = self.following.map{ |user| user.id.to_s}
+        # ids = following_ids
+        # Micropost.where("user_id IN (?) OR user_id = ?", ids, id)
+
+        following_ids = "select followed_id from relationships where follower_id = :user_id"
+        Micropost.where("user_id in (#{following_ids}) OR user_id = :user_id", user_id: id)
     end
 
     def follow(other_user)
