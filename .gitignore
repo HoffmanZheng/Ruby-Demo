@@ -8,43 +8,42 @@
 *.swp
 
 # Ignore bundler config.
-/Ruby\ on\ Rails/blog/.bundle
+/Ruby\ on\ Rails/.bundle
 
 # Ignore the default SQLite database.
-/Ruby\ on\ Rails/blog/db/*.sqlite3
-/Ruby\ on\ Rails/blog/db/*.sqlite3-*
+/Ruby\ on\ Rails/db/*.sqlite3
+/Ruby\ on\ Rails/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/Ruby\ on\ Rails/blog/log/*
-/Ruby\ on\ Rails/blog/tmp
-/Ruby\ on\ Rails/blog/tmp/cache
-!/Ruby\ on\ Rails/blog/log/.keep
-!/Ruby\ on\ Rails/blog/tmp/.keep
+/Ruby\ on\ Rails/log/*
+/Ruby\ on\ Rails/tmp
+/Ruby\ on\ Rails/tmp/cache
+!/Ruby\ on\ Rails/log/.keep
+!/Ruby\ on\ Rails/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/Ruby\ on\ Rails/blog/tmp/pids/*
-!/Ruby\ on\ Rails/blog/tmp/pids/
-!/Ruby\ on\ Rails/blog/tmp/pids/.keep
+/Ruby\ on\ Rails/tmp/pids/*
+!/Ruby\ on\ Rails/tmp/pids/
+!/Ruby\ on\ Rails/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/Ruby\ on\ Rails/blog/storage/*
-!/Ruby\ on\ Rails/blog/storage/.keep
+/Ruby\ on\ Rails/storage/*
+!/Ruby\ on\ Rails/storage/.keep
 
-/Ruby\ on\ Rails/blog/public/assets
-/Ruby\ on\ Rails/blog/.byebug_history
+/Ruby\ on\ Rails/public/assets
+/Ruby\ on\ Rails/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/Ruby\ on\ Rails/blog/config/master.key
+/Ruby\ on\ Rails/config/master.key
 
-/Ruby\ on\ Rails/blog/public/packs
-/Ruby\ on\ Rails/blog/public/packs-test
-/Ruby\ on\ Rails/blog/node_modules
-/Ruby\ on\ Rails/blog/yarn-error.log
-/Ruby\ on\ Rails/blogyarn-debug.log*
+/Ruby\ on\ Rails/public/packs
+/Ruby\ on\ Rails/public/packs-test
+/Ruby\ on\ Rails/node_modules
+/Ruby\ on\ Rails/yarn-error.log
 /Ruby\ on\ Rails/blog.yarn-integrity
 
 # Ignore the .vscode direcctory
-/Ruby\ on\ Rails/blog/.vscode
+/Ruby\ on\ Rails/.vscode
 
 # Ignore the test report in sqlite
-/Ruby\ on\ Rails/blog/db/test.*
+/Ruby\ on\ Rails/db/test.*
