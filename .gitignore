@@ -47,3 +47,6 @@
 
 # Ignore the test report in sqlite
 /Ruby\ on\ Rails/db/test.*
+
+/Ruby\ on\ Rails/.idea
+/Ruby\ on\ Rails/notes
