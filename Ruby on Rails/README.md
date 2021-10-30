@@ -42,16 +42,34 @@ Switch into project directory:
 cd Ruby-Demo/Ruby\ on\ Rails
 ```
 
-Init data in SQLite3:
+Install gems required by the project:
+
+```
+bundle install
+```
+
+Init data in SQLite3: (which could be browsed through [DB Browser for SQLite](https://sqlitebrowser.org/))
 
 ```powershell
 ./bin/rails db:migrate
 ./bin/rails db:seed
 ```
 
+Install jQuery and Bootstrap: 
+
+```powershell
+yarn add jquery@3.4.1 bootstrap@3.4.1
+```
+
 Run the application: visit `http://localhost:3000`
 
 ```powershell
 ./bin/rails server
+```
+
+Run the tests in the application:
+
+```powershell
+./bin.rails test
 ```
 
