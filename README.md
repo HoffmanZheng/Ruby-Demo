@@ -10,9 +10,9 @@
 
 ## English version
 
-Project [Ruby Basic](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20Basic) is the practive-demo related to the book [《たのしいRuby》](https://www.amazon.com/E3-81-9F-E3-81-AE-E3-81-97-E3-81-84Ruby-E7-AC-AC6-E7-89-88-Informatics-IDEA-dp-4797399848/dp/4797399848/ref=dp_ob_title_bk)
+Project [Ruby Basic](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20Basic) is the practice-demo related to the book [《たのしいRuby》](https://www.amazon.com/E3-81-9F-E3-81-AE-E3-81-97-E3-81-84Ruby-E7-AC-AC6-E7-89-88-Informatics-IDEA-dp-4797399848/dp/4797399848/ref=dp_ob_title_bk)
 
-Project [Ruby on Rails](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20on%20Rails) is the practive-demo related to the book [《Ruby on Rails Tutorial》](https://www.railstutorial.org/book)
+Project [Ruby on Rails](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20on%20Rails) is the practice-demo related to the book [《Ruby on Rails Tutorial》](https://www.railstutorial.org/book)
 
 Look in individual project directories for respective project and README.
 

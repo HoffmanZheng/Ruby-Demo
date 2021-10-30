@@ -1,24 +1,57 @@
-# README
+# Ruby on Rails Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A practice-demo related to the book [《Ruby on Rails Tutorial》](https://www.railstutorial.org/book), which contains several modules including user, login, micropost, follow, integeration test, etc. 
 
-Things you may want to cover:
+Project display:
 
-* Ruby version
+![Application Introduction](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20on%20Rails/images/application_introduction.png)
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+Before you develop a rails application, make sure that your system has the proper prerequisites installed. These include: [Ruby](https://www.ruby-lang.org/en/documentation/installation/)、[SQLite3](https://www.sqlite.org/index.html)、[Node.js](https://nodejs.org/en/download/)、[Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable).
 
-* Database creation
+Install Rails: 
 
-* Database initialization
+```powershell
+gem install rails
+```
 
-* How to run the test suite
+Install Bundler:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+gem install bundler
+```
 
-* Deployment instructions
+Verify that you have everything installed correctly:
 
-* ...
+```powershell
+rails --version
+```
+
+## How to build
+
+Clone the project: 
+
+```powershell
+git clone https://github.com/HoffmanZheng/Ruby-Demo.git
+```
+
+Switch into project directory:
+
+```
+cd Ruby-Demo/Ruby\ on\ Rails
+```
+
+Init data in SQLite3:
+
+```powershell
+./bin/rails db:migrate
+./bin/rails db:seed
+```
+
+Run the application: visit `http://localhost:3000`
+
+```powershell
+./bin/rails server
+```
+
