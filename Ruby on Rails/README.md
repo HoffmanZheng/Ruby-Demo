@@ -4,7 +4,7 @@ A practice-demo related to the book [《Ruby on Rails Tutorial》](https://www.r
 
 Project display:
 
-![Application Introduction](https://github.com/HoffmanZheng/Ruby-Demo/tree/master/Ruby%20on%20Rails/images/application_introduction.png)
+![Application Introduction](https://github.com/HoffmanZheng/Ruby-Demo/blob/master/Ruby%20on%20Rails/images/applicaiton_introduction.png)
 
 ## Prerequisites
 
