@@ -14,10 +14,8 @@ print("打印中文试试\n")
 print("一百的字符串=#{b}\n")
 puts(Math.sqrt(99))  # 调用数字运算
 # 加一些东西
-#
-#
-#
-# efaef
+# ## 23213
+# # 43241235@!attribute5
 # 以下为控制语句
 if a >= 10 then
     puts("greater!")
